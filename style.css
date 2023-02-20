@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+
+:root {
+    --var-backgroud-dynamic-text: #0F4C81;
+    --var-backgroud-main: rgb(0 0 0 / 25%);
+    --var-background-grid: #2e31386e;
+    --var-home: #00ade1;
+    --var-about: #aa8aff;
+    --var-rea: #f9fb93;
+    --var-contact: #70ffc4;
+    --var-lndk-icon: #0077B7;
+    --var-cv: #fec015;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: rgb(208,208,219);
+    background: radial-gradient(circle, rgba(208,208,219,1) 0%, rgba(0,173,225,1) 50%, rgba(15,76,129,1) 100%);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: fixed;
+    -webkit-text-size-adjust: none;
+    height: 100%;
+}
+
+.main-body {
+    padding: 45px 100px 45px 100px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--var-backgroud-main);
+    padding: 10px 50px 10px 50px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-size: 17px;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+nav .logo {
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav #toggle,
+nav label {
+    display: none;
+}
+
+nav ul li a {
+    padding: 25px 15px 25px 15px;
+}
+
+nav ul li a:hover {
+    background-color: rgb(0 0 0 / 5%);
+    padding: 25px 15px 25px 15px;
+    border-bottom: solid 3px white;
+    transition: .2s ease;
+    text-decoration: none;
+}
+
+nav a img,
+label img {
+    width: 50px;
+    height: 50px;
+}
+
+.main {
+    display: flex;
+    background: var(--var-backgroud-dynamic-text);
+    height: 100%;
+    text-align: center;
+    font-size: 27px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.color-band {
+    background-color: var(--var-home);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+
+.name-job {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.static {
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.dynamic-text {
+    position: relative;
+    color: var(--var-home);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.dynamic-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--var-backgroud-dynamic-text);
+    border-left: 5px solid #ffffff;
+    animation: cursor 4s steps(12) infinite;
+    -webkit-animation: cursor 4s steps(12) infinite;
+}
+
+@keyframes cursor {
+
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.photo-cv {
+    background: url(img-portfolio/avatar.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+.qualities {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.down-arrow {
+    width: 50px;
+    border-radius: 55px;
+    transition: .2s ease;
+}
+
+.down-arrow:hover {
+    background-color: var(--var-home);
+
+}
+
+.about {
+    display: flex;
+    color: white;
+    background: var(--var-backgroud-main);
+    height: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.about-color-band {
+    background-color: var(--var-about);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+
+.about-me {
+    color: var(--var-about);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 37px;
+    text-transform: uppercase;
+}
+
+.about-me-text,
+.text-realisations {
+    color: white;
+    font-size: 16px;
+    padding: 0px 30px 0px 30px;
+    text-align: justify;
+}
+
+.about-me-text p {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.languages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--var-background-grid);
+    justify-items: center;
+    border-radius: 5px;
+    gap: 25px;
+    padding: 25px 0px 25px 0px;
+    margin-bottom: 25px;
+}
+
+.icons-techno {
+    background-color: var(--var-backgroud-main);
+    width: 65px;
+    border-radius: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    transition: .2s ease;
+}
+
+.icons-techno:hover {
+    background-color: var(--var-about);
+}
+
+.langages,
+.frameworks,
+.cms {
+    color: var(--var-about);
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.realisations {
+    display: flex;
+    color: white;
+    background: var(--var-backgroud-main);
+    height: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.realisations-color-band {
+    background-color: var(--var-rea);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+
+.title-realisations {
+    color: var(--var-rea);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 37px;
+    text-transform: uppercase;
+}
+
+.card-rea {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic-rea-1,
+.pic-rea-2,
+.pic-rea-3 {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin-top: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.bottom-pic-rea-1 {
+    background-color: #7ebeab;
+}
+
+.bottom-pic-rea-2 {
+    background-color: #9c6afc;
+}
+
+.bottom-pic-rea-3 {
+    background-color: #3771dd;
+}
+
+.bottom-pic-rea-1,
+.bottom-pic-rea-2,
+.bottom-pic-rea-3 {
+    display: flex;
+    width: 90%;
+    border-radius: 0px 0px 10px 10px;
+    padding: 22px 0px 22px 0px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.bottom-pic-rea-1 a,
+.bottom-pic-rea-2 a,
+.bottom-pic-rea-3 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    color: white;
+    background: var(--var-backgroud-main);
+    height: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.contact-color-band {
+    background-color: var(--var-contact);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+
+.title-contact {
+    color: var(--var-contact);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 37px;
+    text-transform: uppercase;
+}
+
+.text-contact,
+.text-cv {
+    color: white;
+    padding: 0px 30px 0px 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.text-contact a {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.contact-background,
+.cv-background {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0px 30px 0px;
+}
+
+.icon-background {
+    background-color: var(--var-background-grid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.icon-background a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon-background:hover {
+    background-color: var(--var-contact);
+}
+
+.phone-icon,
+.mail-icon,
+.lkndn-icon,
+.cv-icon,
+.download-icon {
+    background-color: var(--var-backgroud-main);
+    border-radius: 50px;
+    width: 45px;
+    padding: 5px;
+    margin-bottom: 10px;
+    transition: .2s ease;
+}
+
+.lkndn-icon:hover {
+    background-color: var(--var-lndk-icon);
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 0px 30px 0px 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 30px;
+}
+
+.cv {
+    display: flex;
+    color: white;
+    background: var(--var-backgroud-main);
+    height: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.cv-color-band {
+    background-color: var(--var-cv);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+
+.title-cv {
+    color: var(--var-cv);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 37px;
+    text-transform: uppercase;
+}
+
+.icon-background-cv {
+    background-color: var(--var-background-grid);
+    display: flex;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    margin-top: 25px;
+    flex-direction: column;
+    transition: .2s ease;
+
+}
+
+.icon-background-cv a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon-background-cv:hover {
+    background-color: var(--var-cv);
+}
+
+.footer {
+    background-color: var(--var-backgroud-main);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 20px 20px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 868px) {
+
+    .main {
+        height: 720px;
+        padding: 0px 15px 0px 15px;
+    }
+
+    nav a img,
+    label img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .main,
+    .about,
+    .realisations,
+    .contact {
+        margin-bottom: 35px;
+    }
+
+    .main-body {
+        padding: 30px 20px 0px 20px;
+    }
+
+    nav,
+    .footer {
+        padding: 10px 30px 10px 30px;
+    }
+
+    nav .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+    nav label {
+        display: inline-flex;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav #toggle:checked~.menu {
+        height: 100%;
+    }
+
+    .dynamic-text:before {
+        display: none;
+    }
+
+    .color-band {
+        padding: 0px 15px 0px 15px;
+    }
+
+    .qualities {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .name-job,
+    .static,
+    .dynamic-text,
+    .qualities,
+    .about-me,
+    .about-me-text p,
+    .title-realisations,
+    .title-contact,
+    .title-cv {
+        font-size: 25px;
+    }
+
+    .about-me-text,
+    .text-realisations {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .langages,
+    .frameworks,
+    .cms {
+        font-size: 17px;
+    }
+
+    .languages {
+        display: inline-grid;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .icons-techno {
+        width: 40px;
+    }
+
+    .pic-rea-1,
+    .pic-rea-2,
+    .pic-rea-3 {
+        width: 95%;
+    }
+
+    .bottom-pic-rea-1,
+    .bottom-pic-rea-2,
+    .bottom-pic-rea-3 {
+        width: 95%;
+        padding: 20px 15px 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .bottom-pic-rea-1 a,
+    .bottom-pic-rea-2 a,
+    .bottom-pic-rea-3 a {
+        color: white;
+        text-align: initial;
+    }
+
+    .contact-background,
+    .cv-background {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .icon-background {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px 10px 15px;
+        width: 55%;
+    }
+
+    .icon-background-cv {
+        padding: 8px 15px 8px 15px;
+        width: 65%;
+        margin: 0;
+    }
+
+    .phone-icon,
+    .mail-icon,
+    .lkndn-icon,
+    .cv-icon,
+    .download-icon {
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 375px) {
+
+    .main-body {
+        padding: 30px 20px 0px 20px;
+    }
+
+    .main,
+    .about,
+    .realisations,
+    .contact {
+        margin-bottom: 35px;
+    }
+
+    .pic-rea-1,
+    .pic-rea-2,
+    .pic-rea-3 {
+        height: 100%;
+        width: 95%;
+    }
+
+    .bottom-pic-rea-1,
+    .bottom-pic-rea-2,
+    .bottom-pic-rea-3 {
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    .about-me-text,
+    .text-realisations {
+        padding: 0px 15px 0px 15px;
+    }
+
+    .languages {
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .langages,
+    .frameworks,
+    .cms {
+        font-size: 15px;
+    }
+
+    .name-job,
+    .static,
+    .dynamic-text,
+    .qualities,
+    .about-me,
+    .about-me-text p,
+    .title-realisations,
+    .title-contact,
+    .title-cv {
+        font-size: 25px;
+    }
+
+    .realisations {
+        margin-bottom: 35px;
+    }
+
+    .icon-background {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 10px 7px 10px;
+        align-items: center;
+        width: 65%;
+    }
+
+    .contact {
+        gap: 15px;
+    }
+
+    .cv-background {
+        gap: 20px;
+    }
+
+}

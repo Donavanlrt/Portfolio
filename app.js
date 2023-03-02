@@ -12,4 +12,4 @@ const typingtext = () => {
 };
 
 typingtext();
-setInterval(typingtext, 7920);
+setInterval(typingtext, 8010);

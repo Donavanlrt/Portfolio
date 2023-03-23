@@ -489,7 +489,6 @@ label img {
     margin-top: 25px;
     flex-direction: column;
     transition: .2s ease;
-
 }
 
 .icon-background-cv a {
@@ -660,12 +659,6 @@ label img {
         margin: 0px 0px 15px 0px;
     }
 }
-
-
-
-
-
-
 
 @media screen and (max-width: 375px) {
 

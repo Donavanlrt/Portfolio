@@ -33,55 +33,55 @@ body {
 }
 
 .main-body {
-    padding: 45px 100px 45px 100px;
+    padding: 50px 70px 50px 70px;
 }
 
 .wrapper {
     width: 100%;
 }
 
-nav {
+.navbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: var(--var-backgroud-main);
     padding: 10px 50px 10px 50px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     font-size: 17px;
-    position: sticky;
-    top: 0;
     font-weight: bold;
+    position: sticky;
+    /* top: 0; */
     text-decoration: none;
     align-items: center;
     text-transform: uppercase;
+
 }
 
-nav .logo {
+.navbar .logo {
     font-weight: 700;
 }
 
-nav ul {
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 35px;
 }
 
-nav a {
+.navbar a {
     text-decoration: none;
     color: white;
 }
 
-nav #toggle,
-nav label {
+.navbar #toggle,
+.navbar label {
     display: none;
 }
 
-nav ul li a {
+.navbar ul li a {
     padding: 25px 15px 25px 15px;
 }
 
-nav ul li a:hover {
+.navbar ul li a:hover {
     background-color: rgb(0 0 0 / 5%);
     padding: 25px 15px 25px 15px;
     border-bottom: solid 3px white;
@@ -89,10 +89,17 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-nav a img,
+.navbar a img,
 label img {
     width: 50px;
     height: 50px;
+}
+
+.BgColour {
+    background: var(--var-backgroud-dynamic-text);
+    color: black;
+    transition: all 1s;
+    padding: 5px 50px 5px 50px;
 }
 
 .main {
@@ -338,6 +345,7 @@ label img {
     padding: 22px 0px 22px 0px;
     margin-bottom: 30px;
     justify-content: center;
+    text-align: center;
 }
 
 .bottom-pic-rea-1 a,
@@ -356,7 +364,7 @@ label img {
     font-size: 16px;
     font-weight: 300;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
     border-radius: 10px;
     margin-bottom: 100px;
 }
@@ -457,7 +465,7 @@ label img {
     font-size: 16px;
     font-weight: 300;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
     border-radius: 10px;
     margin-bottom: 100px;
 }
@@ -501,8 +509,10 @@ label img {
 }
 
 .footer {
-    background-color: var(--var-backgroud-main);
+    background: var(--var-background-grid);
     color: white;
+    font-size: 17px;
+    text-align: center;
     display: flex;
     justify-content: center;
     padding: 20px 20px 20px 20px;

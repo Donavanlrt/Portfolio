@@ -12,19 +12,18 @@ function scrollValue() {
 
 window.addEventListener('scroll', scrollValue);
 
-// text typing effect //
-
+// text typing effect 
 
 const dynamictext = document.querySelector(".dynamic-text");
 
 const typingtext = () => {
-	setTimeout(() => {
-		dynamictext.textContent = "Développeur Web";
-	}, 0);
+    setTimeout(() => {
+        dynamictext.textContent = "Développeur Web";
+    }, 0);
 
-	setTimeout(() => {
-		dynamictext.textContent = "Intégrateur Web";
-	}, 3800);
+    setTimeout(() => {
+        dynamictext.textContent = "Intégrateur Web";
+    }, 3900);
 
 };
 

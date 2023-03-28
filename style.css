@@ -23,8 +23,7 @@ html {
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: rgb(208,208,219);
-    background: radial-gradient(circle, rgba(208,208,219,1) 0%, rgba(0,173,225,1) 50%, rgba(15,76,129,1) 100%);
+    background: #20262E;    
     background-size: cover;
     -webkit-background-size: cover;
     background-attachment: fixed;
@@ -36,9 +35,9 @@ body {
     padding: 50px 70px 50px 70px;
 }
 
-.wrapper {
+/* .wrapper {
     width: 100%;
-}
+} */
 
 .navbar {
     display: flex;
@@ -54,7 +53,6 @@ body {
     text-decoration: none;
     align-items: center;
     text-transform: uppercase;
-
 }
 
 .navbar .logo {
@@ -104,13 +102,12 @@ label img {
 
 .main {
     display: flex;
-    background: var(--var-backgroud-dynamic-text);
+    background: var(--var-backgroud-main);
     height: 100%;
-    text-align: center;
     font-size: 27px;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
     border-radius: 10px;
     margin-bottom: 100px;
 }
@@ -123,24 +120,31 @@ label img {
     margin-bottom: 10px;
 }
 
+.infos {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .name-job {
     color: white;
+    font-size: 55px;
     font-weight: bold;
-    font-size: 35px;
+    width: 100%;
+}
+
+.static, .dynamic-text {
+    font-size: 30px;
+    position: relative;
+    width: 100%;
 }
 
 .static {
-    position: relative;
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 600;
+    color: white;
 }
 
 .dynamic-text {
-    position: relative;
     color: var(--var-home);
-    font-size: 30px;
-    font-weight: 600;
 }
 
 .dynamic-text:before {
@@ -150,7 +154,7 @@ label img {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--var-backgroud-dynamic-text);
+    background: #181c21;
     border-left: 5px solid #ffffff;
     animation: cursor 4s steps(12) infinite;
     -webkit-animation: cursor 4s steps(12) infinite;
@@ -169,25 +173,22 @@ label img {
 }
 
 .photo-cv {
-    background: url(img-portfolio/avatar.png);
+    background: url(img-portfolio/avatar.jpeg);
     background-size: cover;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
     margin-bottom: 30px;
 }
 
-.qualities {
+.page-scroll {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
-    font-weight: bold;
-    color: white;
+    justify-content: center;
+    margin-top: 30%;
 }
 
 .down-arrow {
-    width: 50px;
+    width: 60px;
     border-radius: 55px;
     transition: .2s ease;
 }

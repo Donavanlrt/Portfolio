@@ -219,7 +219,7 @@ label img {
     margin-bottom: 10px;
 }
 
-.about-text {
+.about-text, .title-realisations {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -227,13 +227,26 @@ label img {
     gap: 15px;
 }
 
-.about-text h1 {
-    color: var(--var-about);
+/* COULEUR TITRES */
+
+.about-text h1, .title-realisations h1 {
     font-size: 42px;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.about-text h3, .about-me h3, .skills-text {
+.about-text h1 {
+    color: var(--var-about);
+}
+
+.title-realisations h1 {
+    color: var(--var-rea);
+}
+
+
+/* COULEUR TITRES */
+
+.about-text h3, .about-me h3, .skills-text, .title-realisations h3 {
     color: white;
     font-size: 18px;
     font-weight: 100;
@@ -308,62 +321,61 @@ label img {
     margin-bottom: 10px;
 }
 
-.title-realisations {
-    color: var(--var-rea);
+.realisation {
     display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 37px;
+    padding: 30px 35px;
+}
+
+.projet1, .projet2, .projet3 {
+    padding: 0px 0px 0px 35px;
+}
+
+.projet1 h1, .projet2 h1, .projet3 h1 {
+    margin-bottom: 25px;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-.card-rea {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.projet1 p, .projet2 p, .projet3 p {
+    color: white;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.pic-rea-1,
-.pic-rea-2,
-.pic-rea-3 {
+.projet1 h1 {
+    color: #7ebeab;
+}
+
+.projet2 h1 {
+    color: #9c6afc;
+}
+
+.projet3 h1 {
+    color: #3771dd;
+}
+
+.skill-rea {
+    background-color: #20262E;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 7px;
+    font-weight: 400;
+}
+
+.skills-rea {
     display: flex;
-    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 15px;
+}
+
+.pic-rea-1, .pic-rea-2, .pic-rea-3 {
+    width: 60%;
     height: 100%;
-    margin-top: 30px;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.bottom-pic-rea-1 {
-    background-color: #7ebeab;
-}
-
-.bottom-pic-rea-2 {
-    background-color: #9c6afc;
-}
-
-.bottom-pic-rea-3 {
-    background-color: #3771dd;
-}
-
-.bottom-pic-rea-1,
-.bottom-pic-rea-2,
-.bottom-pic-rea-3 {
-    display: flex;
-    width: 90%;
-    border-radius: 0px 0px 10px 10px;
-    padding: 22px 0px 22px 0px;
-    margin-bottom: 30px;
-    justify-content: center;
-    text-align: center;
-}
-
-.bottom-pic-rea-1 a,
-.bottom-pic-rea-2 a,
-.bottom-pic-rea-3 a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 7px;
 }
 
 .contact {

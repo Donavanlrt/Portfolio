@@ -4,12 +4,10 @@
 :root {
     --var-backgroud-dynamic-text: #181c21;
     --var-backgroud-main: rgb(0 0 0 / 25%);
-    --var-background-grid: #2e31386e;
+    --var-background-page: #20262E;
     --var-home: #00ade1;
     --var-about: #aa8aff;
     --var-rea: #f9fb93;
-    --var-contact: #70ffc4;
-    --var-lndk-icon: #0077B7;
     --var-cv: #fec015;
 }
 
@@ -34,10 +32,6 @@ body {
 .main-body {
     padding: 50px 70px 50px 70px;
 }
-
-/* .wrapper {
-    width: 100%;
-} */
 
 .navbar {
     display: flex;
@@ -113,6 +107,22 @@ label img {
     margin-bottom: 10px;
 }
 
+.name-text {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.name-text-arrow {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    display: flex;
+}
+
 .infos {
     display: flex;
     width: 100%;
@@ -167,11 +177,10 @@ label img {
 }
 
 .photo-cv {
-    background: url(img-portfolio/avatar.jpeg);
     background-size: cover;
     width: 250px;
     height: 350px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 30px;
 }
 
@@ -182,13 +191,8 @@ label img {
 }
 
 .down-arrow {
-    width: 60px;
-    border-radius: 55px;
+    width: 70px;
     transition: .2s ease;
-}
-
-.down-arrow:hover {
-    background-color: var(--var-home);
 }
 
 .about,
@@ -259,6 +263,11 @@ label img {
     justify-content: center;
 }
 
+.contact-me:hover {
+    background-color: #946efb;
+    transition: .2s ease;
+}
+
 /* COULEUR TITRES */
 
 .about-text h3,
@@ -307,6 +316,7 @@ label img {
     padding: 15px 20px;
     border-radius: 7px;
     font-weight: 400;
+    transition: .2s ease;
 }
 
 .skills-skill:hover {
@@ -406,7 +416,8 @@ label img {
     margin-bottom: 25px;
 }
 
-.icon-cv, .icon-background {
+.icon-cv,
+.icon-background {
     padding: 6px 17px;
     border-radius: 7px;
     transition: .2s ease;
@@ -415,28 +426,17 @@ label img {
     justify-content: center;
 }
 
-/* .position-cv {
-    display: flex;
-    justify-content: center;
-} */
-
-.icon-cv {
-    background-color: var(--var-cv);
+.icon-background, .icon-cv {
+    background-color: var(--var-background-page);
 }
 
-.icon-cv:hover {
-    background-color: var(--var-background-grid);
-}
-
-.icon-background {
-    background-color: var(--var-background-grid);
-}
-
-.cv-icon, .phone-icon, .mail-icon {
+.cv-icon,
+.phone-icon,
+.mail-icon {
     width: 55px;
 }
 
-.icon-background:hover {
+.icon-background:hover, .icon-cv:hover {
     background-color: var(--var-cv);
 }
 
@@ -459,7 +459,7 @@ label img {
 }
 
 .footer {
-    background: var(--var-background-grid);
+    background: var(--var-background-page);
     color: white;
     font-size: 17px;
     text-align: center;
@@ -470,10 +470,12 @@ label img {
     backdrop-filter: blur(5px);
 }
 
+
+
+
 @media screen and (max-width: 868px) {
 
     .main {
-        height: 720px;
         padding: 0px 15px 0px 15px;
     }
 
@@ -547,6 +549,10 @@ label img {
         font-size: 25px;
     }
 
+    .realisation {
+        flex-direction: column;
+    }
+
     .about-me-text,
     .text-realisations {
         padding: 0px 10px 0px 10px;
@@ -613,12 +619,16 @@ label img {
 
     .phone-icon,
     .mail-icon,
-    .lkndn-icon,
     .cv-icon,
     .download-icon {
         margin: 0px 0px 15px 0px;
     }
 }
+
+
+
+
+
 
 @media screen and (max-width: 375px) {
 

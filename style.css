@@ -542,10 +542,6 @@ label img {
 
     }
 
-    .name-job {
-        font-size: 25px;
-    }
-
     .about-me h2,
     .skills h2,
     .me-contact h2,
@@ -559,7 +555,10 @@ label img {
     }
 
     .name-job {
-        width: 210px;
+        font-size: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .static,

@@ -426,7 +426,8 @@ label img {
     justify-content: center;
 }
 
-.icon-background, .icon-cv {
+.icon-background,
+.icon-cv {
     background-color: var(--var-background-page);
 }
 
@@ -436,7 +437,8 @@ label img {
     width: 55px;
 }
 
-.icon-background:hover, .icon-cv:hover {
+.icon-background:hover,
+.icon-cv:hover {
     background-color: var(--var-cv);
 }
 
@@ -490,6 +492,7 @@ label img {
     .realisations,
     .contact {
         margin-bottom: 35px;
+        padding: 0px 0px 10px 0px;
     }
 
     .main-body {
@@ -531,26 +534,112 @@ label img {
         padding: 0px 15px 0px 15px;
     }
 
-    .qualities {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .name-job,
-    .static,
-    .dynamic-text,
-    .qualities,
     .about-me,
     .about-me-text p,
+    .skills h2,
     .title-realisations,
     .title-contact,
     .title-cv {
         font-size: 25px;
+        padding: 0px 12px;
+        font-size: 17px;
+
+    }
+
+    .name-job {
+        font-size: 25px;
+    }
+
+    .about-me h2,
+    .skills h2,
+    .me-contact h2,
+    .cv-text h2 {
+        font-size: 20px;
+    }
+
+    .name-text {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .name-job {
+        width: 210px;
+    }
+
+    .static,
+    .dynamic-text {
+        font-size: 17px;
+    }
+
+    .down-arrow {
+        display: none;
+    }
+
+    .photo-cv {
+        width: 140px;
+        height: 180px;
+    }
+
+    .photo {
+        justify-content: center;
+    }
+
+    .name-text-arrow {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 85px;
+    }
+
+    .about-text h1,
+    .title-realisations h1,
+    .contact-text h1 {
+        font-size: 25px;
+    }
+
+    .about-skills,
+    .contact-cv {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .about-text h3,
+    .about-me h3,
+    .skills-text,
+    .contact-text h3,
+    .me-contact,
+    .cv-text {
+        padding: 0px 10px;
+    }
+
+    .about-text h3,
+    .about-me h3,
+    .skills-text,
+    .title-realisations h3,
+    .contact-text h3,
+    .me-contact p,
+    .cv-text p {
+        font-size: 17px;
     }
 
     .realisation {
         flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .projet1,
+    .projet2,
+    .projet3 {
+        padding: 0px;
+    }
+
+    .projet1 h1,
+    .projet2 h1,
+    .projet3 h1 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-size: 20px;
     }
 
     .about-me-text,
@@ -558,57 +647,17 @@ label img {
         padding: 0px 10px 0px 10px;
     }
 
-    .langages,
-    .frameworks,
-    .cms {
-        font-size: 17px;
-    }
-
-    .languages {
-        display: inline-grid;
-        width: 100%;
-        gap: 10px;
-    }
-
-    .icons-techno {
-        width: 40px;
-    }
-
     .pic-rea-1,
     .pic-rea-2,
     .pic-rea-3 {
-        width: 95%;
-    }
-
-    .bottom-pic-rea-1,
-    .bottom-pic-rea-2,
-    .bottom-pic-rea-3 {
-        width: 95%;
-        padding: 20px 15px 20px 15px;
-        box-sizing: border-box;
-    }
-
-    .bottom-pic-rea-1 a,
-    .bottom-pic-rea-2 a,
-    .bottom-pic-rea-3 a {
-        color: white;
-        text-align: initial;
+        width: 100%;
     }
 
     .contact-background,
     .cv-background {
         display: flex;
-        flex-direction: column;
         gap: 20px;
-        width: 100%;
-        align-items: center;
-    }
-
-    .icon-background {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 15px 10px 15px;
-        width: 55%;
+        justify-content: space-around;
     }
 
     .icon-background-cv {
@@ -617,11 +666,14 @@ label img {
         margin: 0;
     }
 
-    .phone-icon,
-    .mail-icon,
-    .cv-icon,
-    .download-icon {
-        margin: 0px 0px 15px 0px;
+    .icon-cv,
+    .icon-background {
+        padding: 7px 7px;
+    }
+
+    .position-cv, .icon-position {
+        display: flex;
+        justify-content: center;
     }
 }
 

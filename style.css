@@ -530,10 +530,6 @@ label img {
         display: none;
     }
 
-    .color-band {
-        padding: 0px 15px 0px 15px;
-    }
-
     .about-me,
     .about-me-text p,
     .skills h2,
@@ -677,12 +673,7 @@ label img {
     }
 }
 
-
-
-
-
-
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
 
     .main-body {
         padding: 30px 20px 0px 20px;
@@ -702,28 +693,9 @@ label img {
         width: 95%;
     }
 
-    .bottom-pic-rea-1,
-    .bottom-pic-rea-2,
-    .bottom-pic-rea-3 {
-        width: 95%;
-        box-sizing: border-box;
-    }
-
     .about-me-text,
     .text-realisations {
         padding: 0px 15px 0px 15px;
-    }
-
-    .languages {
-        gap: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .langages,
-    .frameworks,
-    .cms {
-        font-size: 15px;
     }
 
     .name-job,
@@ -758,4 +730,4 @@ label img {
         gap: 20px;
     }
 
-}
+} */

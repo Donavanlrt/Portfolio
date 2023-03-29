@@ -23,7 +23,7 @@ html {
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: #20262E;    
+    background: #20262E;
     background-size: cover;
     -webkit-background-size: cover;
     background-attachment: fixed;
@@ -93,13 +93,6 @@ label img {
     height: 50px;
 }
 
-.BgColour {
-    background: var(--var-backgroud-dynamic-text);
-    color: black;
-    transition: all 1s;
-    padding: 5px 50px 5px 50px;
-}
-
 .main {
     display: flex;
     background: var(--var-backgroud-main);
@@ -133,7 +126,8 @@ label img {
     width: 100%;
 }
 
-.static, .dynamic-text {
+.static,
+.dynamic-text {
     font-size: 30px;
     position: relative;
     width: 100%;
@@ -195,10 +189,10 @@ label img {
 
 .down-arrow:hover {
     background-color: var(--var-home);
-
 }
 
-.about {
+.about,
+.contact {
     display: flex;
     color: white;
     background: var(--var-backgroud-main);
@@ -219,7 +213,9 @@ label img {
     margin-bottom: 10px;
 }
 
-.about-text, .title-realisations {
+.about-text,
+.title-realisations,
+.contact-text {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -229,7 +225,9 @@ label img {
 
 /* COULEUR TITRES */
 
-.about-text h1, .title-realisations h1 {
+.about-text h1,
+.title-realisations h1,
+.contact-text h1 {
     font-size: 42px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -243,42 +241,57 @@ label img {
     color: var(--var-rea);
 }
 
+.contact-text h1 {
+    color: var(--var-cv);
+}
+
+.contact-me {
+    background-color: var(--var-about);
+    color: white;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    width: 23%;
+    justify-content: center;
+}
 
 /* COULEUR TITRES */
 
-.about-text h3, .about-me h3, .skills-text, .title-realisations h3 {
+.about-text h3,
+.about-me h3,
+.skills-text,
+.title-realisations h3,
+.contact-text h3 {
     color: white;
     font-size: 18px;
     font-weight: 100;
 }
 
-.about-skills {
+.about-skills,
+.contact-cv {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px 35px;
     gap: 40px;
 }
 
-.about-me h2, .skills h2 {
+.about-me h2,
+.skills h2 {
     color: var(--var-about);
     font-size: 28px;
     margin-bottom: 25px;
 }
 
-.about-me p {
+.about-me p,
+.me-contact p,
+.cv-text p {
     line-height: 1.5;
     margin-bottom: 15px;
-}
-
-.contact-me {
-    background-color: var(--var-about);
     color: white;
-    border-radius: 7px;
-    padding: 16px 16px;
-    font-weight: bold;
-    border: none;
-    font-size: 17px;
-    letter-spacing: 1px;
 }
 
 .skills-text {
@@ -326,18 +339,24 @@ label img {
     padding: 30px 35px;
 }
 
-.projet1, .projet2, .projet3 {
+.projet1,
+.projet2,
+.projet3 {
     padding: 0px 0px 0px 35px;
 }
 
-.projet1 h1, .projet2 h1, .projet3 h1 {
+.projet1 h1,
+.projet2 h1,
+.projet3 h1 {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
 }
 
-.projet1 p, .projet2 p, .projet3 p {
+.projet1 p,
+.projet2 p,
+.projet3 p {
     color: white;
     font-weight: 400;
     line-height: 1.5;
@@ -372,162 +391,71 @@ label img {
     gap: 15px;
 }
 
-.pic-rea-1, .pic-rea-2, .pic-rea-3 {
+.pic-rea-1,
+.pic-rea-2,
+.pic-rea-3 {
     width: 60%;
     height: 100%;
     border-radius: 7px;
 }
 
-.contact {
-    display: flex;
-    color: white;
-    background: var(--var-backgroud-main);
-    height: 100%;
-    font-size: 16px;
-    font-weight: 300;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 10px;
-    margin-bottom: 100px;
+.me-contact h2,
+.cv-text h2 {
+    color: var(--var-cv);
+    font-size: 28px;
+    margin-bottom: 25px;
 }
 
-.contact-color-band {
-    background-color: var(--var-contact);
-    width: 100%;
-    height: 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
-}
-
-.title-contact {
-    color: var(--var-contact);
+.icon-cv, .icon-background {
+    padding: 6px 17px;
+    border-radius: 7px;
+    transition: .2s ease;
+    width: 23%;
     display: flex;
     justify-content: center;
-    font-weight: bold;
-    font-size: 37px;
-    text-transform: uppercase;
 }
 
-.text-contact,
-.text-cv {
-    color: white;
-    padding: 0px 30px 0px 30px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.text-contact a {
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.contact-background,
-.cv-background {
+/* .position-cv {
     display: flex;
-    justify-content: space-around;
-    margin: 30px 0px 30px 0px;
+    justify-content: center;
+} */
+
+.icon-cv {
+    background-color: var(--var-cv);
+}
+
+.icon-cv:hover {
+    background-color: var(--var-background-grid);
 }
 
 .icon-background {
     background-color: var(--var-background-grid);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 30px 10px 30px;
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: .2s ease;
 }
 
-.icon-background a {
-    text-decoration: none;
-    color: white;
+.cv-icon, .phone-icon, .mail-icon {
+    width: 55px;
 }
 
 .icon-background:hover {
-    background-color: var(--var-contact);
+    background-color: var(--var-cv);
 }
 
-.phone-icon,
-.mail-icon,
-.lkndn-icon,
-.cv-icon,
-.download-icon {
-    background-color: var(--var-backgroud-main);
-    border-radius: 50px;
-    width: 45px;
-    padding: 5px;
-    margin-bottom: 10px;
-    transition: .2s ease;
-}
-
-.lkndn-icon:hover {
-    background-color: var(--var-lndk-icon);
-}
-
-.socialmedia {
+.contact-background {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding: 0px 30px 0px 30px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-    gap: 30px;
+    justify-content: space-around;
 }
 
-.cv {
-    display: flex;
+.icon-background a {
     color: white;
-    background: var(--var-backgroud-main);
-    height: 100%;
-    font-size: 16px;
-    font-weight: 300;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 10px;
-    margin-bottom: 100px;
+    text-decoration: none;
 }
 
-.cv-color-band {
+.contact-color-band {
     background-color: var(--var-cv);
     width: 100%;
     height: 10px;
     border-radius: 10px 10px 0px 0px;
     margin-bottom: 10px;
-}
-
-.title-cv {
-    color: var(--var-cv);
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 37px;
-    text-transform: uppercase;
-}
-
-.icon-background-cv {
-    background-color: var(--var-background-grid);
-    display: flex;
-    align-items: center;
-    padding: 10px 30px 10px 30px;
-    border-radius: 15px;
-    font-size: 18px;
-    margin-top: 25px;
-    flex-direction: column;
-    transition: .2s ease;
-}
-
-.icon-background-cv a {
-    text-decoration: none;
-    color: white;
-}
-
-.icon-background-cv:hover {
-    background-color: var(--var-cv);
 }
 
 .footer {

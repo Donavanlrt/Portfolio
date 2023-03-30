@@ -22,11 +22,6 @@ html {
 body {
     font-family: 'Ubuntu', sans-serif;
     background: #20262E;
-    background-size: cover;
-    -webkit-background-size: cover;
-    background-attachment: fixed;
-    -webkit-text-size-adjust: none;
-    height: 100%;
 }
 
 .main-body {
@@ -38,19 +33,10 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 50px 10px 50px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     font-size: 17px;
     font-weight: bold;
-    position: sticky;
-    /* top: 0; */
-    text-decoration: none;
     align-items: center;
     text-transform: uppercase;
-}
-
-.navbar .logo {
-    font-weight: 700;
 }
 
 .navbar ul {
@@ -90,21 +76,10 @@ label img {
 .main {
     display: flex;
     background: var(--var-backgroud-main);
-    height: 100%;
-    font-size: 27px;
     flex-direction: column;
-    align-items: center;
     gap: 30px;
     border-radius: 10px;
     margin-bottom: 100px;
-}
-
-.color-band {
-    background-color: var(--var-home);
-    width: 100%;
-    height: 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
 }
 
 .name-text {
@@ -115,12 +90,7 @@ label img {
 }
 
 .name-text-arrow {
-    display: flex;
     flex-direction: column;
-}
-
-.photo {
-    display: flex;
 }
 
 .infos {
@@ -132,15 +102,6 @@ label img {
 .name-job {
     color: white;
     font-size: 55px;
-    font-weight: bold;
-    width: 100%;
-}
-
-.static,
-.dynamic-text {
-    font-size: 30px;
-    position: relative;
-    width: 100%;
 }
 
 .static {
@@ -149,6 +110,13 @@ label img {
 
 .dynamic-text {
     color: var(--var-home);
+}
+
+.static,
+.dynamic-text {
+    font-size: 30px;
+    position: relative;
+    width: 100%;
 }
 
 .dynamic-text:before {
@@ -176,14 +144,6 @@ label img {
     }
 }
 
-.photo-cv {
-    background-size: cover;
-    width: 250px;
-    height: 350px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-}
-
 .page-scroll {
     display: flex;
     justify-content: center;
@@ -195,13 +155,17 @@ label img {
     transition: .2s ease;
 }
 
+.photo-cv {
+    background-size: cover;
+    width: 250px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
 .about,
 .contact {
     display: flex;
-    color: white;
     background: var(--var-backgroud-main);
-    height: 100%;
-    font-size: 16px;
     font-weight: 300;
     flex-direction: column;
     gap: 25px;
@@ -209,33 +173,32 @@ label img {
     margin-bottom: 100px;
 }
 
+/* DEBUT COLOR BAND */
+
+.color-band {
+    background-color: var(--var-home);
+}
+
 .about-color-band {
     background-color: var(--var-about);
-    width: 100%;
+}
+
+.realisations-color-band {
+    background-color: var(--var-rea);
+}
+
+.contact-color-band {
+    background-color: var(--var-cv);
+}
+
+.color-band, .about-color-band, .realisations-color-band, .contact-color-band {
     height: 10px;
     border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
 }
 
-.about-text,
-.title-realisations,
-.contact-text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
+/* FIN COLOR BAND */
 
-/* COULEUR TITRES */
-
-.about-text h1,
-.title-realisations h1,
-.contact-text h1 {
-    font-size: 42px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+/* DEBUT COULEUR TITRES */
 
 .about-text h1 {
     color: var(--var-about);
@@ -249,26 +212,24 @@ label img {
     color: var(--var-cv);
 }
 
-.contact-me {
-    background-color: var(--var-about);
-    color: white;
-    border: none;
-    padding: 12px 17px;
-    border-radius: 7px;
-    font-weight: 600;
-    font-size: 17px;
-    text-decoration: none;
+.about-text h1,
+.title-realisations h1,
+.contact-text h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* FIN COULEUR TITRES */
+
+.about-text,
+.title-realisations,
+.contact-text {
     display: flex;
-    width: 23%;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
-
-.contact-me:hover {
-    background-color: #946efb;
-    transition: .2s ease;
-}
-
-/* COULEUR TITRES */
 
 .about-text h3,
 .about-me h3,
@@ -303,6 +264,25 @@ label img {
     color: white;
 }
 
+.contact-me {
+    background-color: var(--var-about);
+    color: white;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    width: 23%;
+    justify-content: center;
+}
+
+.contact-me:hover {
+    background-color: #946efb;
+    transition: .2s ease;
+}
+
 .skills-text {
     display: flex;
     justify-content: space-between;
@@ -312,36 +292,23 @@ label img {
 
 .skills-skill {
     background-color: #20262E;
-    color: white;
     padding: 15px 20px;
     border-radius: 7px;
     font-weight: 400;
-    transition: .2s ease;
 }
 
 .skills-skill:hover {
     background-color: #aa8aff;
+    transition: .2s ease;
 }
 
 .realisations {
     display: flex;
-    color: white;
     background: var(--var-backgroud-main);
-    height: 100%;
-    font-size: 16px;
-    font-weight: 300;
     flex-direction: column;
     gap: 25px;
     border-radius: 10px;
     margin-bottom: 100px;
-}
-
-.realisations-color-band {
-    background-color: var(--var-rea);
-    width: 100%;
-    height: 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
 }
 
 .realisation {
@@ -349,28 +316,8 @@ label img {
     padding: 30px 35px;
 }
 
-.projet1,
-.projet2,
-.projet3 {
+.projet1, .projet2, .projet3 {
     padding: 0px 0px 0px 35px;
-}
-
-.projet1 h1,
-.projet2 h1,
-.projet3 h1 {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.projet1 p,
-.projet2 p,
-.projet3 p {
-    color: white;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 10px;
 }
 
 .projet1 h1 {
@@ -385,12 +332,16 @@ label img {
     color: #3771dd;
 }
 
-.skill-rea {
-    background-color: #20262E;
+.projet1 h1, .projet2 h1, .projet3 h1 {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.projet1 p, .projet2 p, .projet3 p {
     color: white;
-    padding: 15px 20px;
-    border-radius: 7px;
-    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 .skills-rea {
@@ -401,23 +352,30 @@ label img {
     gap: 15px;
 }
 
-.pic-rea-1,
-.pic-rea-2,
-.pic-rea-3 {
+.skill-rea {
+    background-color: #20262E;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 7px;
+    font-weight: 400;
+}
+
+.pic-rea-1, .pic-rea-2, .pic-rea-3 {
     width: 60%;
-    height: 100%;
     border-radius: 7px;
 }
 
-.me-contact h2,
-.cv-text h2 {
+.me-contact h2, .cv-text h2 {
     color: var(--var-cv);
     font-size: 28px;
     margin-bottom: 25px;
 }
 
-.icon-cv,
-.icon-background {
+.icon-background, .icon-cv {
+    background-color: var(--var-background-page);
+}
+
+.icon-cv, .icon-background {
     padding: 6px 17px;
     border-radius: 7px;
     transition: .2s ease;
@@ -426,19 +384,11 @@ label img {
     justify-content: center;
 }
 
-.icon-background,
-.icon-cv {
-    background-color: var(--var-background-page);
-}
-
-.cv-icon,
-.phone-icon,
-.mail-icon {
+.cv-icon, .phone-icon, .mail-icon {
     width: 55px;
 }
 
-.icon-background:hover,
-.icon-cv:hover {
+.icon-background:hover, .icon-cv:hover {
     background-color: var(--var-cv);
 }
 
@@ -447,39 +397,17 @@ label img {
     justify-content: space-around;
 }
 
-.icon-background a {
-    color: white;
-    text-decoration: none;
-}
-
-.contact-color-band {
-    background-color: var(--var-cv);
-    width: 100%;
-    height: 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
-}
-
 .footer {
-    background: var(--var-background-page);
+    background: var(--var-backgroud-main);
     color: white;
     font-size: 17px;
     text-align: center;
     display: flex;
     justify-content: center;
     padding: 20px 20px 20px 20px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
 }
 
-
-
-
 @media screen and (max-width: 868px) {
-
-    .main {
-        padding: 0px 15px 0px 15px;
-    }
 
     .navbar a img,
     label img {
@@ -487,10 +415,7 @@ label img {
         height: 35px;
     }
 
-    .main,
-    .about,
-    .realisations,
-    .contact {
+    .main, .about, .realisations, .contact {
         margin-bottom: 35px;
         padding: 0px 0px 10px 0px;
     }
@@ -499,8 +424,14 @@ label img {
         padding: 30px 20px 0px 20px;
     }
 
-    .navbar,
-    .footer {
+    .name-text-arrow {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 85px;
+    }
+
+    .navbar, .footer {
         padding: 10px 30px 10px 30px;
     }
 
@@ -530,25 +461,6 @@ label img {
         display: none;
     }
 
-    .about-me,
-    .about-me-text p,
-    .skills h2,
-    .title-realisations,
-    .title-contact,
-    .title-cv {
-        font-size: 25px;
-        padding: 0px 12px;
-        font-size: 17px;
-
-    }
-
-    .about-me h2,
-    .skills h2,
-    .me-contact h2,
-    .cv-text h2 {
-        font-size: 20px;
-    }
-
     .name-text {
         flex-direction: column;
         gap: 0;
@@ -556,9 +468,6 @@ label img {
 
     .name-job {
         font-size: 25px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     .static,
@@ -572,49 +481,38 @@ label img {
 
     .photo-cv {
         width: 140px;
-        height: 180px;
     }
 
     .photo {
         justify-content: center;
-    }
-
-    .name-text-arrow {
-        width: 100%;
         display: flex;
-        align-items: center;
-        height: 85px;
     }
 
-    .about-text h1,
-    .title-realisations h1,
-    .contact-text h1 {
+    .about-me, .about-me-text p, .skills h2, .title-realisations, .title-contact, .title-cv {
+        font-size: 25px;
+        padding: 0px 12px;
+        font-size: 17px;
+    }
+
+    .about-me h2, .skills h2, .me-contact h2, .cv-text h2 {
+        font-size: 20px;
+    }
+
+    .about-text h1, .title-realisations h1, .contact-text h1 {
         font-size: 25px;
     }
 
-    .about-skills,
-    .contact-cv {
+    .about-skills, .contact-cv {
         grid-template-columns: 1fr;
         padding: 0;
         gap: 25px;
     }
 
-    .about-text h3,
-    .about-me h3,
-    .skills-text,
-    .contact-text h3,
-    .me-contact,
-    .cv-text {
+    .about-text h3, .about-me h3, .skills-text, .contact-text h3, .me-contact, .cv-text {
         padding: 0px 10px;
     }
 
-    .about-text h3,
-    .about-me h3,
-    .skills-text,
-    .title-realisations h3,
-    .contact-text h3,
-    .me-contact p,
-    .cv-text p {
+    .about-text h3, .about-me h3, .skills-text, .title-realisations h3, .contact-text h3, .me-contact p, .cv-text p {
         font-size: 17px;
     }
 
@@ -623,42 +521,18 @@ label img {
         padding: 10px 10px;
     }
 
-    .projet1,
-    .projet2,
-    .projet3 {
+    .projet1, .projet2, .projet3 {
         padding: 0px;
     }
 
-    .projet1 h1,
-    .projet2 h1,
-    .projet3 h1 {
+    .projet1 h1, .projet2 h1, .projet3 h1 {
         margin-top: 12px;
         margin-bottom: 12px;
         font-size: 20px;
     }
 
-    .about-me-text,
-    .text-realisations {
-        padding: 0px 10px 0px 10px;
-    }
-
-    .pic-rea-1,
-    .pic-rea-2,
-    .pic-rea-3 {
+    .pic-rea-1, .pic-rea-2, .pic-rea-3 {
         width: 100%;
-    }
-
-    .contact-background,
-    .cv-background {
-        display: flex;
-        gap: 20px;
-        justify-content: space-around;
-    }
-
-    .icon-background-cv {
-        padding: 8px 15px 8px 15px;
-        width: 65%;
-        margin: 0;
     }
 
     .icon-cv,
@@ -666,67 +540,8 @@ label img {
         padding: 7px 7px;
     }
 
-    .position-cv, .icon-position {
+    .position-cv {
         display: flex;
         justify-content: center;
     }
 }
-
-/* @media screen and (max-width: 375px) {
-
-    .main-body {
-        padding: 30px 20px 0px 20px;
-    }
-
-    .main,
-    .about,
-    .realisations,
-    .contact {
-        margin-bottom: 35px;
-    }
-
-    .pic-rea-1,
-    .pic-rea-2,
-    .pic-rea-3 {
-        height: 100%;
-        width: 95%;
-    }
-
-    .about-me-text,
-    .text-realisations {
-        padding: 0px 15px 0px 15px;
-    }
-
-    .name-job,
-    .static,
-    .dynamic-text,
-    .qualities,
-    .about-me,
-    .about-me-text p,
-    .title-realisations,
-    .title-contact,
-    .title-cv {
-        font-size: 25px;
-    }
-
-    .realisations {
-        margin-bottom: 35px;
-    }
-
-    .icon-background {
-        display: flex;
-        flex-direction: column;
-        padding: 7px 10px 7px 10px;
-        align-items: center;
-        width: 65%;
-    }
-
-    .contact {
-        gap: 15px;
-    }
-
-    .cv-background {
-        gap: 20px;
-    }
-
-} */

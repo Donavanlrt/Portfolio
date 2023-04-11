@@ -7,6 +7,9 @@
     --var-home: #00ade1;
     --var-about: #aa8aff;
     --var-rea: #d54362;
+    --var-lapizza: #7ebeab;
+    --var-thaito: #9c6afc;
+    --var-judo: #3771dd;
     --var-cv: #fec015;
 }
 
@@ -320,15 +323,15 @@ label img {
 }
 
 .projet1 h1 {
-    color: #7ebeab;
+    color: var(--var-lapizza);
 }
 
 .projet2 h1 {
-    color: #9c6afc;
+    color: var(--var-thaito);
 }
 
 .projet3 h1 {
-    color: #3771dd;
+    color: var(--var-judo);
 }
 
 .projet1 h1, .projet2 h1, .projet3 h1 {
@@ -362,6 +365,58 @@ label img {
 .pic-rea-1, .pic-rea-2, .pic-rea-3 {
     width: 700px;
     border-radius: 7px;
+}
+
+.hover-link {
+    position: relative;
+  }
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute;
+    background: #ffffff00;
+    inset: 0;
+    width: 700px;
+    opacity: 0;
+    transition: .3s ease;
+    backdrop-filter: blur(3px);
+    border-radius: 7px;
+}
+
+  
+.hover-link:hover .overlay {
+    opacity: 1;
+}
+  
+.text1, .text2, .text3 {
+    color: white;
+    font-size: 17px;
+    padding: 8px 13px;
+    border-radius: 9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.text1 {
+    background-color: var(--var-lapizza);
+}
+
+.text2 {
+    background-color: var(--var-thaito);
+}
+
+.text3 {
+    background-color: var(--var-judo);
 }
 
 .me-contact h2, .cv-text h2 {

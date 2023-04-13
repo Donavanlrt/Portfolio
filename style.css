@@ -579,6 +579,10 @@ label img {
         padding: 10px 10px;
     }
 
+    .overlay {
+        width: 100%;
+    }
+
     .projet1, .projet2, .projet3 {
         padding: 0px;
     }

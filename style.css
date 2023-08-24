@@ -34,11 +34,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px 50px 10px 50px;
+    padding: 20px 50px 20px 50px;
     font-size: 17px;
     font-weight: bold;
     align-items: center;
-    text-transform: uppercase;
 }
 
 .navbar ul {
@@ -59,20 +58,19 @@ body {
 
 .navbar ul li a {
     padding: 25px 15px 25px 15px;
+    cursor: pointer;
 }
 
 .navbar ul li a:hover {
-    background-color: rgb(0 0 0 / 5%);
     padding: 25px 15px 25px 15px;
-    border-bottom: solid 3px white;
-    transition: .2s ease;
+    border-bottom: solid 2px var(--var-home);
     text-decoration: none;
+    transition: 0.1s;
 }
 
 .navbar a img,
 label img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
 }
 
 .main {
@@ -136,7 +134,7 @@ label img {
 }
 
 .icon-cv {
-    margin-top: 50px;
+    margin-top: 40px;
     width: 100%;
     display: flex;
     gap: 20px;
@@ -149,8 +147,6 @@ label img {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 100;
-    text-transform: uppercase;
     letter-spacing: 1px;
     transition: .2s ease;
     display: flex;
@@ -181,7 +177,7 @@ label img {
 .page-scroll {
     display: flex;
     justify-content: center;
-    margin: 15% 0 15% 0;
+    margin: 50px 0 0 0;
 }
 
 .down-arrow {
@@ -192,7 +188,7 @@ label img {
 .photo-cv {
     background-size: cover;
     width: 300px;
-    border-radius: 150px;
+    border-radius: 300px;
     margin-bottom: 30px;
 }
 
@@ -307,11 +303,9 @@ label img {
 .contact-me {
     background-color: var(--var-about);
     color: white;
-    border: none;
     padding: 12px 17px;
     border-radius: 7px;
     font-weight: 600;
-    font-size: 17px;
     text-decoration: none;
     display: flex;
     width: 23%;
@@ -498,11 +492,12 @@ label img {
     font-size: 17px;
     text-align: center;
     display: flex;
-    justify-content: center;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 50px;
+    flex-direction: column;
+    gap: 14px;
 }
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1000px) {
 
     .navbar a img,
     label img {
@@ -589,7 +584,6 @@ label img {
     }
 
     .about-me, .about-me-text p, .skills h2, .title-realisations, .title-contact, .title-cv {
-        font-size: 25px;
         padding: 0px 12px;
         font-size: 17px;
     }
@@ -649,6 +643,7 @@ label img {
         display: flex;
         width: 82%;
         margin-top: 25px;
+        justify-content: center;
     }
 
     .icon-cv a {
